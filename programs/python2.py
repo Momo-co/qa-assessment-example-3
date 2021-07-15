@@ -11,7 +11,16 @@
 # one(['tic', 'tac', 'toe']) → {'tic':1, 'tac':1, 'toe':1}
     
 def one(items):
-    pass
+    thisdict = {}
+    for x in items:
+        if x in thisdict.keys():
+            thisdict[x] += 1
+        else:
+            thisdict[x] = 1
+
+    return thisdict
+        
+print( one(['apple', 'banana', 'orange', 'orange', 'apple', 'apple']))
 
 # <QUESTION 2>
 
