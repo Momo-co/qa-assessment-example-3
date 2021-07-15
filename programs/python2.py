@@ -19,8 +19,6 @@ def one(items):
             thisdict[x] = 1
 
     return thisdict
-        
-print( one(['apple', 'banana', 'orange', 'orange', 'apple', 'apple']))
 
 # <QUESTION 2>
 
@@ -37,8 +35,24 @@ print( one(['apple', 'banana', 'orange', 'orange', 'apple', 'apple']))
 # two(-5, 2, '/') → -2.5
 
 def two(a, b, operator):
-    pass
+    numberA = float(a)
+    numberB = float(b)
+    result = 0
 
+    if operator == '+':
+        result = numberA + numberB
+    elif operator == '-':
+        result = numberA - numberB
+    elif operator == '*':
+        result = numberA * numberB
+    elif operator == '/':
+        result = numberA/numberB
+    if result % 1 == 0:
+        return int(result)
+    else:
+        return result
+
+        
 # <QUESTION 3>
 
 # Given a positive integer, return the next integer below it that has an
@@ -57,7 +71,12 @@ def two(a, b, operator):
 # We can use `x ** 0.5` to get the square root of `x`
 
 def three(num):
-    pass
+    squareRoot = num ** 0.5
+    while squareRoot % 1 != 0:
+        num -= 1
+        squareRoot = num ** 0.5
+    return num
+
 
 # <QUESTION 4>
 
