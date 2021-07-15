@@ -89,7 +89,12 @@ def three(num):
 # four(10, 50) → 10
 
 def four(a, b):
-    pass
+    cf = max(a,b)
+    while a % cf != 0 or b % cf != 0:
+        cf -= 1
+    return cf
+
+
 
 # <QUESTION 5>
 
