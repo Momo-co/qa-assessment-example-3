@@ -116,12 +116,19 @@ def four(a, b):
 def five(string):
     result = ''
     for char in string:
-        if char == 'a':
-            char = 'z'
-        elif char == 'A':
-            char = 'Z'
-        else:
-            char = chr(ord(char) - 1 )
-        result +=char
+        if char.isalpha():
+
+            if char == 'a':
+                char = 'z'
+            elif char == 'A':
+                char = 'Z'
+            else:
+                char = chr(ord(char) - 1 )
+            result +=char
+        elif char == " ":
+            result += char
+        else: 
+            result += char
     return result
 
+print (five('hello world'))
