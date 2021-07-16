@@ -114,4 +114,14 @@ def four(a, b):
 # five('54321') → '54321'
 
 def five(string):
-    pass
+    result = ''
+    for char in string:
+        if char == 'a':
+            char = 'z'
+        elif char == 'A':
+            char = 'Z'
+        else:
+            char = chr(ord(char) - 1 )
+        result +=char
+    return result
+
